@@ -30,7 +30,6 @@ class UberGallery {
     protected $_rImgDir    = NULL;
     protected $_now        = NULL;
 
-
     /**
      * UberGallery construct function. Runs on object creation.
      */
@@ -689,7 +688,7 @@ class UberGallery {
         }
 
         // Return relative path to thumbnail
-        $relativePath = '/' . $this->_rThumbsDir . '/' . $fileName;
+        $relativePath = $this->_rThumbsDir . '/' . $fileName;
         return $relativePath;
     }
 
@@ -1225,7 +1224,7 @@ class UberGallery {
         $relativePath = implode('/', $diffArray);
 
         // Return the relative path
-        return $relativePath;
+        return '/' . $relativePath;
 
     }
 

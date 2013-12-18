@@ -16,8 +16,11 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 function uberGallery($params)
 {
+    //load up the css?
+    //load up the script(s) ??
+
     $galleries = 'wp-content/ubergallery/galleries/';
-    $render = 'wp-content/plugins/ubergallery/render.php';
+    $render = 'wp-content/plugins/ubergallery/resources/render.php';
 
     $galleryName = array_key_exists('name', $params) ? $params['name'] : '';
 
