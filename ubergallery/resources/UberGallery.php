@@ -195,7 +195,7 @@ class UberGallery {
                 $relativePath = $this->_rImgDir . '/' . $key;
 
                 $galleryArray['images'][htmlentities(pathinfo($image['real_path'], PATHINFO_BASENAME))] = array(
-                    'file_title'   => str_replace('_', ' ', pathinfo($image['real_path'], PATHINFO_FILENAME)),
+                    'file_title'   => preg_replace("/[^a-zA-Z0-9\s]/", " ", pathinfo($image['real_path'], PATHINFO_FILENAME)),
                     'file_path'    => htmlentities($relativePath),
                     'thumb_path'   => $this->_createThumbnail($image['real_path'])
                 );
