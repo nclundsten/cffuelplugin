@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/wp-content/plugins/ubergallery/resources/rebase-min.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo UBERGALLERY_STYLE_PATH_RELATIVE; ?>" />
-<?php echo $gallery->getColorboxStyles(5); ?>
+<?php echo $gallery->getColorboxStyles(4); ?>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <?php echo $gallery->getColorboxScripts(); ?>
@@ -17,7 +17,6 @@
         <?php endif; ?>
     </div>
 
-    <div class="line"></div>
     <div id="galleryFooter" class="clearfix">
 
         <?php if ($galleryArray['stats']['total_pages'] > 1): ?>
