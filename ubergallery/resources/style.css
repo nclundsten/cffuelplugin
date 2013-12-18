@@ -2,19 +2,6 @@
 /* -----| GENERAL |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-html {
-    background-color: #355664;
-    font-size: 100%;
-}
-
-body {
-    background-color: #355664;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif, Verdana;
-    font-size: .8em;
-    text-shadow: 1px 1px 1px #333;
-}
-
 #galleryWrapper {
     background-color: #213E4A;
     border-radius: 5px;
@@ -23,14 +10,6 @@ body {
     width: 740px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-}
-
-h1 {
-    color: #FFF;
-    font-size: 1.6em;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 0;
 }
 
 #galleryListWrapper {
