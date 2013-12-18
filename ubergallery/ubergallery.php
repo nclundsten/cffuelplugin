@@ -14,12 +14,11 @@ Author URI: wordpress.org
 
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-$uberGal = ABSPATH . 'wp-content/ubergallery/';
-DEFINE('UBERGALLERY_RENDERER_PATH', ABSPATH . 'wp-content/plugins/ubergallery/index.php');
-DEFINE('UBERGALLERY_GALLERY_PATH', $uberGal . 'galleries/');
-
 function uberGallery($params)
 {
+    $galleries = 'wp-content/ubergallery/galleries/';
+    $render = 'wp-content/plugins/ubergallery/render.php';
+
     $galleryName = array_key_exists('name', $params) ? $params['name'] : '';
 
     // Include the UberGallery class
@@ -29,11 +28,11 @@ function uberGallery($params)
     $gallery = new UberGallery();
 
     // Initialize the gallery array
-    $galleryArray = $gallery->readImageDirectory(UBERGALLERY_GALLERY_PATH . $galleryName);
+    $galleryArray = $gallery->readImageDirectory($galleries . $galleryName);
 
     // Initialize the theme
-    if (file_exists(UBERGALLERY_RENDERER_PATH)) {
-        include(UBERGALLERY_RENDERER_PATH);
+    if (file_exists($render)) {
+        include($render);
     } else {
         die('ERROR: Failed to load renderer');
     }

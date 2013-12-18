@@ -482,7 +482,7 @@ class UberGallery {
         $this->_imgDir  = realpath($directory);
 
         // Set relative path to $directory
-        $this->_rImgDir = $directory;
+        $this->_rImgDir = '/' . $directory;
 
         // Set index name
         if ($this->_config['img_per_page'] < 1) {
@@ -689,7 +689,7 @@ class UberGallery {
         }
 
         // Return relative path to thumbnail
-        $relativePath = $this->_rThumbsDir . '/' . $fileName;
+        $relativePath = '/' . $this->_rThumbsDir . '/' . $fileName;
         return $relativePath;
     }
 
