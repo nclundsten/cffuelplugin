@@ -43,7 +43,7 @@ function uberGallery($params)
     $galleryName = array_key_exists('name', $params) ? $params['name'] : '';
 
     // Include the UberGallery class
-    include('resources/UberGallery.php');
+    require_once('resources/UberGallery.php');
 
     // Initialize the UberGallery object
     $gallery = new UberGallery();
