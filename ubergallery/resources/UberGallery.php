@@ -481,7 +481,7 @@ class UberGallery {
         $this->_imgDir  = realpath($directory);
 
         // Set relative path to $directory
-        $this->_rImgDir = '/' . $directory;
+        $this->_rImgDir =  strstr($directory, UBERGALLERY_CONTENT_PATH_RELATIVE);
 
         // Set index name
         if ($this->_config['img_per_page'] < 1) {

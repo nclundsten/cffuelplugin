@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/wp-content/plugins/ubergallery/resources/rebase-min.css" />
-<link rel="stylesheet" type="text/css" href="/wp-content/plugins/ubergallery/resources/style.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo UBERGALLERY_STYLE_PATH_RELATIVE; ?>" />
 <?php echo $gallery->getColorboxStyles(5); ?>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -7,19 +7,6 @@
 
 <!-- Start UberGallery v<?php echo UberGallery::VERSION; ?> - Copyright (c) <?php echo date('Y'); ?> Chris Kankiewicz (http://www.ChrisKankiewicz.com) -->
 <div id="galleryWrapper">
-    <h1>UberGallery</h1>
-    <div class="line"></div>
-
-    <?php if($gallery->getSystemMessages()): ?>
-        <ul id="systemMessages">
-            <?php foreach($gallery->getSystemMessages() as $message): ?>
-                <li class="<?php echo $message['type']; ?>">
-                    <?php echo $message['text']; ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
-
     <div id="galleryListWrapper">
         <?php if (!empty($galleryArray) && $galleryArray['stats']['total_images'] > 0): ?>
             <ul id="galleryList" class="clearfix">
@@ -48,8 +35,6 @@
 
         </ul>
         <?php endif; ?>
-
-        <div id="credit">Powered by, <a href="http://www.ubergallery.net">UberGallery</a></div>
     </div>
 </div>
 <!-- End UberGallery - Distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php -->
